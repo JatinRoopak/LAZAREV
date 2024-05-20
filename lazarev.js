@@ -97,25 +97,35 @@ function page2anime() {
         });
     });
 }
-// page2anime()
+page2anime()
 
-var page3center = document.querySelector("#page3-center")
-var video = document.querySelector("#video")
-page3center.addEventListener("click",function(){
-    video.play()
-    gsap.to(video,{
-        transform: "scaleX(1) scaleY(1)",
-        borderRadius:"0",
-        opacity:"1",
+function page3video() {
+    var page3center = document.querySelector("#page3-center")
+    var video = document.querySelector("#video")
+    var showreel = document.querySelector('#showreel')
+
+    page3center.addEventListener("click",function(){
+        video.play()
+        gsap.to(video,{
+            display:"flex",
+            transform: "scaleX(1) scaleY(1)",
+            borderRadius:"0",
+            opacity:"1",
         
     })
+    gsap.to(showreel,{
+        display:"flex"
+    })
 })
-video.addEventListener("click",function(){
-    video.pause()
-    gsap.to(video,{
-        transform: "scaleX(0.7) scaleY(0)",
-        borderRadius: "40px",
-        opacity: 0,
+    video.addEventListener("click",function(){
+        video.pause()
+        gsap.to(video,{
+            transform: "scaleX(0.7) scaleY(0)",
+            borderRadius: "40px",
+            opacity: 0,
+            display:"none",
 
     })
 })
+}
+page3video()
