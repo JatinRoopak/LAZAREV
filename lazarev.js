@@ -104,28 +104,76 @@ function page3video() {
     var video = document.querySelector("#video")
     var showreel = document.querySelector('#showreel')
 
-    page3center.addEventListener("click",function(){
+    page3center.addEventListener("click", function () {
         video.play()
-        gsap.to(video,{
-            display:"flex",
+        gsap.to(video, {
+            display: "flex",
             transform: "scaleX(1) scaleY(1)",
-            borderRadius:"0",
-            opacity:"1",
-        
+            borderRadius: "0",
+            opacity: "1",
+
+        })
+        gsap.to(showreel, {
+            display: "flex"
+        })
     })
-    gsap.to(showreel,{
-        display:"flex"
-    })
-})
-    video.addEventListener("click",function(){
+    video.addEventListener("click", function () {
         video.pause()
-        gsap.to(video,{
+        gsap.to(video, {
             transform: "scaleX(0.7) scaleY(0)",
             borderRadius: "40px",
             opacity: 0,
-            display:"none",
+            display: "none",
 
+        })
     })
-})
 }
 page3video()
+
+function pikaandnodo() {
+
+    var rightpika = document.querySelector('.rightpika')
+    var pikavideo = document.querySelector('#pikavideo')
+    var pikaimg = document.querySelector('#pikaimg')
+    rightpika.addEventListener('mouseenter', function () {
+        pikavideo.play()
+        gsap.to(pikaimg, {
+            opacity:"0"
+        })
+        gsap.to(pikavideo,{
+            opacity:"1"
+        })
+    });
+    rightpika.addEventListener('mouseleave', function () {
+        pikavideo.load()
+        gsap.to(pikaimg, {
+            opacity:"1"
+        })
+        gsap.to(pikavideo,{
+            opacity:"0"
+        })
+    });
+
+    var rightnodo = document.querySelector('.rightnodo')
+    var nodovideo = document.querySelector('#nodovideo')
+    var nodoimg = document.querySelector('#nodoimg')
+    rightnodo.addEventListener('mouseenter', function () {
+        nodovideo.play()
+        gsap.to(nodoimg, {
+            opacity:"0"
+        })
+        gsap.to(nodovideo,{
+            opacity:"1"
+        })
+    });
+    rightnodo.addEventListener('mouseleave', function () {
+        nodovideo.load()
+        gsap.to(nodoimg, {
+            opacity:"1"
+        })
+        gsap.to(nodovideo,{
+            opacity:"0"
+        })
+    });
+}
+pikaandnodo()
