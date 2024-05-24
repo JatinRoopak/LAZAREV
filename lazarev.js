@@ -138,18 +138,22 @@ function pikaandnodo() {
     rightpika.addEventListener('mouseenter', function () {
         pikavideo.play()
         gsap.to(pikaimg, {
-            opacity:"0"
+            duration: 0,
+            opacity:"0",
         })
         gsap.to(pikavideo,{
+            duration: 0,
             opacity:"1"
         })
     });
     rightpika.addEventListener('mouseleave', function () {
         pikavideo.load()
         gsap.to(pikaimg, {
+            duration: 0,
             opacity:"1"
         })
         gsap.to(pikavideo,{
+            duration: 0,
             opacity:"0"
         })
     });
@@ -160,20 +164,51 @@ function pikaandnodo() {
     rightnodo.addEventListener('mouseenter', function () {
         nodovideo.play()
         gsap.to(nodoimg, {
+            duration:0,
             opacity:"0"
         })
         gsap.to(nodovideo,{
+            duration: 0,
             opacity:"1"
         })
     });
     rightnodo.addEventListener('mouseleave', function () {
         nodovideo.load()
         gsap.to(nodoimg, {
+            duration: 0,
             opacity:"1"
         })
         gsap.to(nodovideo,{
+            duration: 0,
             opacity:"0"
         })
     });
 }
 pikaandnodo()
+
+function pikaandnodoanimation() {
+    var relem = document.querySelectorAll('.page5-elem #right')
+    relem.forEach(function(elem){
+    elem.addEventListener("mouseenter",function(){
+        gsap.to(elem.childNodes[1],{
+            opacity:"1",
+            scale:"1"
+        })
+    })
+    elem.addEventListener("mouseleave",function(){
+        gsap.to(elem.childNodes[1],{
+            opacity:"0",
+            scale:"0"
+        })
+    })
+    elem.addEventListener("mousemove",function(dets){
+        gsap.to(elem.childNodes[1],{
+            x:dets.x - elem.getBoundingClientRect().x -65,
+            y:dets.y - elem.getBoundingClientRect().y -60
+        })
+    })
+})
+}
+pikaandnodoanimation()
+
+

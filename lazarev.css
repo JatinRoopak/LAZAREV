@@ -530,7 +530,34 @@ body {
     width: 100%;
     object-fit: cover;
     opacity: 0;
-
+}
+.viewcasestudy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50%;
+    padding: 1.4vw 1vw 2vw 0.2vw;
+    height:11vw;
+    width: 11vw;
+    position: absolute;
+    z-index: 10;
+    background-color: #4F5BFF;
+    opacity: 0;
+    scale: 0;
+    
+}
+.viewcasestudy h6{
+    color: white;
+    font-size: 1vw;
+    font-family: Montserrat;
+    margin-right: 1.5vw;
+    font-weight: 700;
+}
+.viewcasestudy svg{
+    color: white;
+    height: 1.4vw;
+    margin-left: 6vw;
 }
 
 #page6{
