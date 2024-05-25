@@ -561,6 +561,186 @@ body {
 }
 
 #page6{
+    padding: 8rem 0rem 0rem 23rem;
+    margin-top: 20vh;
+    background-color: #111111;
     width: 100%;
-    height: 100vh;
+    height:25rem;
+    line-height: 0.9;
 }
+#page6 h1{
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 4.2vw;
+}
+
+#page7{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200vh;
+    width: 100%;
+    /* background-color: #635454; */
+    background-color: #111111;
+}
+
+#page7content{
+    padding-top: 4rem;
+    border-top: solid 1px #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+    background-color: #111111;
+}
+
+#becomeclientcolumn{
+    width: 22%;
+    /* background-color: blue; */
+    background-color: #111111;
+    height: 100%;
+}
+#becomeclientcolumn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    border: none;
+    height: 3.4rem;
+    width: 100%;
+    border-radius: calc(3.4rem/2);
+    background-color: #0DA34E;
+    position: sticky;
+    top: 20vh;   
+}
+#becomeclientcolumn button h3{
+    color: #fff;
+    font-family:Montserrat;
+
+}
+#becomeclientcolumn button svg{
+    height: 2vw;
+    color: #fff;
+}
+
+#servicescontent{
+    width: 62vw;
+    background-color: #111111;
+    /* background-color: #111111; */
+    height: 100%;
+}
+#servicescontent h2{
+    margin-top: 2vh;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 2vw;
+}
+#servicescontent h4{
+    font-weight: 300 ;
+    font-family: Oswald;
+    color: #fff;
+    font-size: 1.5vw ;
+}
+
+
+#uiuxdesign{
+    border-top: 1px solid white;
+    padding-top: 1rem;
+    margin-top: 4rem;
+    height: 11rem;
+    background-color: #111111;
+}
+#uiuxdesign h1{
+    font-size: 2.6rem;
+    color: white;
+    font-family: Montserrat;
+}
+
+#uiuxdesign div{
+    margin-top: 1.45rem;
+    display: flex;
+}
+
+.uiuxdesigncont{
+    display: flex;
+    border: 1px solid white;
+    padding: 0.4rem 0.6rem;
+    border-radius: 1rem;
+}
+.uiuxdesigncont h5{
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 0.7rem;
+}
+.uiuxdetailcont svg{
+    height: 2rem;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    transition: all ease 0.3s;
+}
+
+.uiuxdetailcont h5{
+    font-size: 0.8vw;
+    color: #fff;
+}
+
+.uiuxdetailcont{
+    overflow: hidden;
+    padding-top: 3vh;
+    border-top: solid 1px #333;
+    display: flex;
+    justify-content: space-between;
+    font-family: Montserrat;
+    background-color: #111111;
+    height: 20vh;
+    position: relative;
+}
+
+.uiuxdetailconth3{
+    color: #fff;
+    font-size: 1.4vw;
+    font-weight: 500;
+    height: 0vh;
+    background-color: #111111;
+    width: 20%;
+
+    position: relative;
+    z-index: 1;
+    transition: all ease 0.3s;
+
+}
+.uiuxdetailconth5{
+    width: 50%;
+    /* background-color: yellow; */
+    position: relative;
+    z-index: 1;
+}
+
+
+#overlap{
+    height:20vh;
+    top: -100%;
+    width: 100%;
+    position: absolute;
+    background-color: #333;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.uiuxdetailcont:hover #overlap{
+    opacity: 1;
+    top:0;
+}
+
+.uiuxdetailcont:hover .uiuxdetailconth3{
+    transform: translateX(1.2vw);
+}
+
+.uiuxdetailcont:hover .uiuxsvg{
+    transform: translateX(-1.2vw);
+}
+
