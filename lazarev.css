@@ -22,6 +22,7 @@ body {
     align-items: center;
     font-family: poppins;
     padding-bottom: 15vh;
+    position: relative;
 }
 
 #page1 h1 {
