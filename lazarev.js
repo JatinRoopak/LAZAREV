@@ -63,7 +63,7 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 }
-locomotivescrolltriggercodepen()
+// locomotivescrolltriggercodepen()
 
 function navanimation() {
     var nav = document.querySelector("#nav2")
